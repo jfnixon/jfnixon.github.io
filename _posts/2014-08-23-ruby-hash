@@ -1,0 +1,34 @@
+---
+layout: post
+title: Self-declaring nested Ruby hashes
+---
+
+<div class="message">
+You can pass a block to Hash.new, which will be yeilded to if the hash instance is queried 
+for a non-existent key.
+</div>
+
+## Self-declaring nested Ruby hashes
+
+This insight comes from Avdi Grimm and Ruby Tapas.
+
+Hash#new takes a block which defines the **default value** returned when attempting to access a
+non-existent key in the instance hash. The block is yielded to in that case, and the value returned
+by the block is the value returned by the hash. Send the hash instance a #default_proc message, and the
+return value is a Proc made from the default value block. Put those two ideas together, and you can
+automatically make nested hashes as needed!
+
+### Code
+
+{% highlight ruby %}
+// Create a hash that creates a new hash when accessing a non-existing key
+// Use it to store config data without creating all the intermediate hashes
+
+config = Hash.new do |h,key|
+  h[key] = Hash.new(&h.default_proc)
+end
+
+config[:production][:database][:adapter] = 'mysql'
+config[:production][:database][:adapter] # => "mysql"
+{% endhighlight %}
+
