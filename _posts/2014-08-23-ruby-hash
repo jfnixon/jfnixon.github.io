@@ -4,17 +4,17 @@ title: Self-declaring nested Ruby hashes
 ---
 
 <div class="message">
-You can pass a block to Hash.new, which will be yeilded to if the hash instance is queried 
-for a non-existent key.
+You can pass a block to Hash.new, which will define the default return value for the hash instance.
 </div>
 
 ## Self-declaring nested Ruby hashes
 
 This insight comes from Avdi Grimm and Ruby Tapas.
 
-Hash#new takes a block which defines the **default value** returned when attempting to access a
-non-existent key in the instance hash. The block is yielded to in that case, and the value returned
-by the block is the value returned by the hash. Send the hash instance a #default_proc message, and the
+When instantiating a hash, Hash#new takes a block. This block returns the **default value** which is returned
+when attempting to access a
+non-existent key. The block is yielded to in that case, and the block's returned value
+is the value returned by the hash. Send the hash instance a #default_proc message, and the
 return value is a Proc made from the default value block. Put those two ideas together, and you can
 automatically make nested hashes as needed!
 
