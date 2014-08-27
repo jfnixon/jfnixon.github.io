@@ -4,7 +4,7 @@ title: Vendor everything
 ---
 
 <div class="message">
-For Ruby projects, manage depenmdencies without RVM gemsets.
+For Ruby projects, manage dependencies without RVM gemsets.
 </div>
 
 ## Vendor everything to document your code and manage dependencies
@@ -17,8 +17,8 @@ This insight comes from
 * Keep a cache of your gem dependencies in version control using bundle package.
 * This only applies to Ruby applications; gem development is a different beast.
 
-{% highlight shell %}
+```Shell
 $ bundle install --path vendor
 $ bundle package
 $ echo 'vendor/ruby' >> .gitignore
-{% endhighlight %}
+```
