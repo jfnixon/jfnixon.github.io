@@ -3,6 +3,10 @@ _gh_pages
 _site
 .ruby-version
 
+# vendored gems are ignored
+
+vendor/ruby
+
 # Numerous always-ignore extensions
 *.diff
 *.err
