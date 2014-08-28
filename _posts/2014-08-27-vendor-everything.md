@@ -4,7 +4,7 @@ title: Vendor everything
 ---
 
 <div class="message">
-For Ruby projects, manage depenmdencies without RVM gemsets.
+For Ruby projects, manage dependencies without RVM gemsets.
 </div>
 
 ## Vendor everything to document your code and manage dependencies
