@@ -1,15 +1,16 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
 
 # Setup
+exclude:          ["vendor"]
 title:            John F. Nixon
 tagline:          Nonrandom things I don't want to forget
 url:              http://blog.johnfnixon.com
-paginate:         1
+paginate:         5
 baseurl:          /
 author:
   name:           John F. Nixon
