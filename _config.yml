@@ -1,15 +1,13 @@
 title:            I can be terse
 tagline:          A nonrandom collection of things I don't want to forget
 description:      Notes made on the way to understanding Ruby and Rails development.
-# Your site's domain goes here. Leave localhost server or blank when working locally.
-url:             http://blog.johnfnixon.com/ 
 
 # Owner/author information
 owner:
   name:           John F. Nixon
   avatar:         bio-photo.jpg
   bio:            "I'm a computer science type interested in networking, operating systems, physics, music, and astronomy."
-  email:         john@johnfnixon.com
+  email:          john@johnfnixon.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   # To register at HMFAYSAL SOCIAL, visit http://social.hmfaysal.tk
   twitter:        jfnixon
