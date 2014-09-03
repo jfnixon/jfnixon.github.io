@@ -69,12 +69,16 @@ gemdir
 2.1.2 hubble ~/test %
 {% endhighlight %}
 
-So how does a Ruby program locate and use the code in a gem? A Ruby script *requires 'rubygems'*,
-and subsequent *require* commands invoke rubygems to activate the specificed gem. Rubygems finds
-the specified gem's code and modifies the Ruby load path ($LOAD_PATH) which controls how your Ruby code 
-is found by the require statement. When you require a gem, rubygems places that gem’s 
-lib directory onto your $LOAD_PATH, thereby controling
-the gems that will be activated (loaded) in response to require.
+So how does a Ruby program locate and use the code in a gem?
+The Ruby Kernel consults a load path when it encounters a *require <name>* statement, looking for
+a gem that matches the required name.
+When a Ruby script *requires 'rubygems'*, rubygems 
+replaces Kernel#reqire with its own #require.
+Now *require* will invoke rubygems#require to activate the specificed gem. If the required gem is already
+on the load path ($LOAD_PATH), rubygems#require sends control to Kernel#require. If the required gem
+is not found on the current load path, Rubygems finds
+the specified gem's code and modifies the Ruby load path ($LOAD_PATH) to include the gem's directory.
+In this way the load path is constructed to point to the code for installed gems.
 
 {% highlight shell-session %}
 2.1.2 hubble ~/test % irb
