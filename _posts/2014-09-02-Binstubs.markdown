@@ -44,7 +44,7 @@ to use an earlier version of a commandline tool, supply the needed version info 
 characters in the call to the binstub.
 
 {% highlight shell-session %}
-% rake \_1.5.2\_
+% rake _1.5.2_
 {% endhighlight %}
 
 The binstub looks like this
