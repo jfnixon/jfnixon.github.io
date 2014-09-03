@@ -9,8 +9,12 @@ Managing your Ruby Gems with RubyGems and the gem command.
 
 ## RubyGems is a package manager
 
-RubyGems is a package manager for Ruby gems. The command line interface to RubyGems is via the *gem* command. With *gem* you can search
-gem servers, download gems, install, update, and delete gems. There are other commands as well. You can read the docs for 
+RubyGems is a package manager for Ruby gems, and has been a part of Ruby itself since version 1.9.2. 
+Ruby gems are hosted on gem servers, the most important of which
+is rubygems.org. The command line interface to the rubygems.org API is via 
+the *gem* command. With *gem* you can search
+gem servers, download gems, install, update, and delete gems. There are other commands as well. 
+You can read the docs for 
 [gem commands](http://guides.rubygems.org/command-reference/),
 or type
 
@@ -18,7 +22,8 @@ or type
 % gem help commands
 {% endhighlight %}
 
-Installing a gem puts the contents of the gemfile in a directory with other gems. These collections are sometimes called gemsets.
+Installing a gem puts the contents of the gem package in a directory with other gems. These 
+collections of installed gems are sometimes called gemsets.
 
 {% highlight shell-session %}
 2.1.2 hubble ~/test % gem install --install-dir gemdir yamlconfig
@@ -64,10 +69,12 @@ gemdir
 2.1.2 hubble ~/test %
 {% endhighlight %}
 
-So how does a Ruby program locate and use the code in a gem? A Ruby program *requires 'rubygems'*, and subsequent *require* commands invoke rubygems. Rubygems finds
-the specified code and modifies the Ruby load path $LOAD_PATH, which controls how your Ruby code is found by the
-require statement. When you require a gem, really you’re just placing that gem’s lib directory onto your $LOAD_PATH. Control where $LOAD_PATH points, and you control
-the gems that will be loaded in response to require.
+So how does a Ruby program locate and use the code in a gem? A Ruby script *requires 'rubygems'*,
+and subsequent *require* commands invoke rubygems to activate the specificed gem. Rubygems finds
+the specified gem's code and modifies the Ruby load path ($LOAD_PATH) which controls how your Ruby code 
+is found by the require statement. When you require a gem, rubygems places that gem’s 
+lib directory onto your $LOAD_PATH, thereby controling
+the gems that will be activated (loaded) in response to require.
 
 {% highlight shell-session %}
 2.1.2 hubble ~/test % irb
@@ -83,6 +90,7 @@ irb(main):001:0> puts $LOAD_PATH
 => nil
 {% endhighlight %}
 
-On an ending note, Ryan Tomayako of Sinatra fame makes an excellent point that using _require 'rubygems'_ in library code and apps is probably the wrong thing to do.
+On an ending note, Ryan Tomayako of Sinatra fame makes an excellent point that
+using _require 'rubygems'_ in library code and apps is probably the wrong thing to do.
 You can read his explanation at this [Gist](https://gist.github.com/rtomayko/54177).
 
