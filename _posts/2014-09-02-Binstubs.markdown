@@ -1,0 +1,57 @@
+---
+title: Binstubs
+layout: post
+---
+
+<div class="message">
+Binstubs are wrapper scripts to set the proper environment for executables
+</div>
+
+## Ruby tools correspond to activated gems
+
+Ruby tools like *rake*, and *rails*, and even *gem* itself interact with the RubyGem environment. These
+tools ought to be thought of as **activated gems**. We've seen that Bundler puts a lot of effort into 
+selecting a set of activated gems for a project, and the various tools are part of that as well. For example,
+you wouldn't want to run the wrong version of rails if your project has dependencies on the version of rails.
+Rather than directly load a ruby project executable, a *binary stub* or binstub is invoked first, and it makes
+sure the proper version of the executable is run and the proper set of gems is activated.
+
+## bundle exec
+
+Bundler understands the proper set of gems that should be activated based on the local Gemfile, so to insure
+the proper version of rake, rails, thor, and so forth are run, Bundler provides the **bundle exec** command
+to activate the Gemfile specified set of gems consistent with the Gemfmile's project. So invoking rails by
+typing *bundle exec rails* insures the correct version of rails is run in the context of the proper set
+of activated gems.
+
+There are several tools to help avoid the need to type *bundle exec*, but I'm not altogether happy with
+any of them.
+
+## rbenv 'shims' are binstubs
+
+The Ruby version manager **rbenv** uses binstubs to ensure the proper Ruby version is run. These binstubs
+are called *shims* in rbenv-speak, and the are (usually) found in $HOME/.rbenv/shims. This directory
+should be found early in the shell's $PATH. Stevphenson has a 
+[really excellent explanation of binstubs](https://github.com/sstephenson/rbenv/wiki/Understanding-binstubs)
+as part of rbenv's documentation.
+
+## RubyGems also creates binstubs
+
+Rubygems can create binstubs for gems that contain executables so the proper execution environment is set up
+before the gem's executable is invoked. The latest version of a gem is the one
+whose executable will be invoked if no version info is supplied to the binstub. If your project needs
+to use an earlier version of a commandline tool, supply the needed version info surrounded by underscore
+characters in the call to the binstub.
+
+{% highlight shell-session %}
+% rake \_1.5.2\_
+{% endhighlight %}
+
+The binstub looks like this
+
+{% highlight ruby %}
+
+{% endhighlight %}
+
+Rubygems newest versions are becoming aware of the Gemfile, just like Bundler, and I think we'll
+soon see the need to use *bundle exec* go away.
