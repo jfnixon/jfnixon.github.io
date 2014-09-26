@@ -69,7 +69,7 @@ A better way is found in
 your source code control and doesn't require source to be checked out (as the first technique does).
 If the git respository is local to your machine, you can set up a local override.
 
-{% highlight ruby %}
+{% highlight shell-session %}
 % bundle config local.mygem /path/to/mygem/git-respository
 {% endhighlight %}
 
