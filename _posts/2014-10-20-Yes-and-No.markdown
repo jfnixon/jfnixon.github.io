@@ -1,0 +1,35 @@
+---
+layout: post
+title: The power of Yes and No
+---
+
+<div class="message">
+Avdi Grimm's take on the power of Yes and No
+</div>
+
+## The power of words
+
+This post is a little different. [Avdi Grimm](http://about.avdi.org) is a smart guy. If you are learning
+to be a Rubyist, you could do worse than to subscribe to his [Ruby Tapas](http://www.rubytapas.com/)
+screencast episodes.
+
+I was really impressed with his [journal entry](http://journal.avdi.org/2014/10/19/yes-and-no/). Read
+the whole thing!
+
+<blockquote>
+Showing up is, in my mind, a form of saying “yes”. When you’re trying to change
+your circumstances, saying “yes” plays an amazingly big role.
+
+Yes to the open-mic night. Yes to the call for proposals. Yes to the meetup
+invite. Yes to the last-minute speaker slot that opens up, no matter how much
+of a hassle it is to change your plans. Yes to the audition. Yes to the local
+community organizer who is looking for some help. Yes to the OSS project that
+needs a new maintainer.
+
+This isn’t some airheaded yes-to-the-universe new age woo-woo. All of these
+“yeses” involve doing some legwork first. You have to be in the right place to
+hear the question. You have to do a little research, be on the right mailing
+lists, follow the right people. Fortunately, the Internet makes this part
+relatively easy, assuming you have access.
+<cite>Avid Grim, Yes and No</cite>
+</blockquote>
