@@ -7,7 +7,7 @@ title: Gall's Law
 Complex systems evolve from working, simple systems
 </div>
 
-## Working Systems
+## Working Systems, Budgets, and Scheduling
 
 In the 1975 book "Systematics" John Gall observed
 
@@ -17,4 +17,15 @@ In the 1975 book "Systematics" John Gall observed
 
 I think this is eactly correct. Complex systems
 must be built on top of robust and well designed
-infrastructure.
+infrastructure. Successful complex systems are not the result
+of a Big Bang style massive-build-then-deploy strategy. Instead, succesful
+complex systems are the result of a sequence of small projects, each building
+on the success of the earlier projects. Estimating the cost and schedule of a
+complex system is very much hit or miss. Estimating the cost and schedule of a
+small project is a much more well-defined process. Therefore, while one can make
+a "best guess" at the budget and schedule for a complex project, this shouldn't be
+considered a hard target unless the feature set for the complex project is flexible.
+As each small project becomes clearly defined, refine the 
+overall budget and schedulei (or feature set) for the complex project. Be very aware that as the
+smaller systems feature sets become well-defined and their budgets and schedules are made, the complex
+system endpoint budget and schedule (or feature set) **will** need to be revised.
