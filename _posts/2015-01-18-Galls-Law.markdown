@@ -29,3 +29,8 @@ As each small project becomes clearly defined, refine the
 overall budget and schedulei (or feature set) for the complex project. Be very aware that as the
 smaller systems feature sets become well-defined and their budgets and schedules are made, the complex
 system endpoint budget and schedule (or feature set) **will** need to be revised.
+
+I would say the real value in the initial budget, schedule, and feature set is setting the context
+for understanding the limitations and goals of the 'client.' Decisions and tradeoffs that will
+inevitably occur as development proceeds are made in the context of the initial requirements, budget,
+and schedule.
