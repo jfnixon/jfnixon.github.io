@@ -4,7 +4,7 @@ title: Gall's Law
 ---
 
 <div class="message">
-John Gall's "Systematics" book observed
+Complex systems evolve from working, simple systems
 </div>
 
 ## Working Systems
