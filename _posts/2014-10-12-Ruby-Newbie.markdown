@@ -30,7 +30,7 @@ at first. Although it is a Ruby version manager, it also installs new rubies, an
 Gemsets are not really needed anymore, as *Bundler* can work with all your gems in one place, but 
 conceptually it is easy to see how things work with gemsets. Later, if you want, you can migrate to
 *rbenv* (which I use) and decide how you want to handle gems for multiple projects (I am a fan of
-the [Vendor Everything Philosophy](http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/)).
+the [Vendor Everything Philosophy](http://blog.johnfnixon.com/vendor-everything/)).
 
 After you have a Ruby Version Manager, install the rubies of your choice. I'd go with a Ruby version at or
 above 1.9.3 as a minimum. Earlier version of Ruby have slightly different behaviors, and you want to learn with

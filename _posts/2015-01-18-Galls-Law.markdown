@@ -1,0 +1,36 @@
+---
+layout: post
+title: Gall's Law
+---
+
+<div class="message">
+Complex systems evolve from working, simple systems
+</div>
+
+## Working Systems, Budgets, and Scheduling
+
+In the 1975 book "Systematics" John Gall observed
+
+>A complex system that works is invariably found to have evolved from a simple system
+>that worked. A complex system designed from scratch never works and cannot be patched
+>up to make it work. You have to start over with a working simple system.
+
+I think this is eactly correct. Complex systems
+must be built on top of robust and well designed
+infrastructure. Successful complex systems are not the result
+of a Big Bang style massive-build-then-deploy strategy. Instead, succesful
+complex systems are the result of a sequence of small projects, each building
+on the success of the earlier projects. Estimating the cost and schedule of a
+complex system is very much hit or miss. Estimating the cost and schedule of a
+small project is a much more well-defined process. Therefore, while one can make
+a "best guess" at the budget and schedule for a complex project, this shouldn't be
+considered a hard target unless the feature set for the complex project is flexible.
+As each small project becomes clearly defined, refine the 
+overall budget and schedulei (or feature set) for the complex project. Be very aware that as the
+smaller systems feature sets become well-defined and their budgets and schedules are made, the complex
+system endpoint budget and schedule (or feature set) **will** need to be revised.
+
+I would say the real value in the initial budget, schedule, and feature set is setting the context
+for understanding the limitations and goals of the 'client.' Decisions and tradeoffs that will
+inevitably occur as development proceeds are made in the context of the initial requirements, budget,
+and schedule.
